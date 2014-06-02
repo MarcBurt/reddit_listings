@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RedditListings::VERSION
   s.authors     = ["Marc Burt"]
   s.email       = ["marc.burt@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/MarcBurt/Reddit_Listings"
   s.summary     = "A gem to simplify capturing listings of one or more subreddits ."
-  s.description = "TODO: Description of RedditListings."
+  s.description = "This gem returns an array of up to 100 listings (content posts and self posts) from any subreddit(s) and sorting methods possible."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
