@@ -3,7 +3,7 @@ require 'json'
 
 module RedditListings
 
-  def self.listings(subreddit, options = {})
+  def self.get(subreddit, options = {})
     @subreddit = subreddit
     @limit = options[:total] || "5"
     @time = options[:timeframe] || "day"

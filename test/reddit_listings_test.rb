@@ -11,7 +11,7 @@ class RedditListingsTest < ActiveSupport::TestCase
   end
 
   test "should be able to retrieve the title of the second post of r/ruby in all" do
-    @listing = RedditListings.listings("ruby+rails", timeframe: "all", total: "2", sort_by: "top")
+    @listing = RedditListings.get("ruby+rails", timeframe: "all", total: "2", sort_by: "top")
     assert_match  "This test passes!", @listing[1][:title]
   end
 

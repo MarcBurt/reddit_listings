@@ -1,3 +1,8 @@
 = RedditListings
 
+
 This project rocks and uses MIT-LICENSE.
+
+Reddit_Listings allows you to quickly get an array of up to 100 listings (content posts and self posts) from any subreddit(s) and sorting methods possible.
+
+
