@@ -1,8 +1,79 @@
 = RedditListings
 
+Reddit_Listings allows you to quickly get an array of up to 100 listings (content posts and self posts) from any subreddit(s) and sorting methods possible.
+
+== Installation 
+
+* You can install the latest release from RubyGems:
+
+    gem install reddit_listings
+
+* If your application uses Bundler, add a line like this to your Gemfile:
+
+    gem "reddit_listings", "~> 1.0.0"
+
+== How to use
+  
+Initialise a variable with RedditListings.get:
+
+    @foo = RedditListings.get("subreddit", :timeframe => "x", :total => "x", ":sort_by => "x")
+
+The options after the subreddit are optional.
+
+To use more than one subreddit join them with a +
+
+The options for :sort_be are: "hot", "new", "rising", "controversial", "top", "gilded", promoted
+The :timeframe option should only be included if "top" or "controversial" :sort_by options were chosen. The options are "hour", "week", "month", "year" and "all".
+
+The :limit option specifies how many listings should be returned, to a maximum of 100.
+
+The default options are :sort_by => "top", :total => "5" and :timeframe => "day"
+
+=== Examples
+
+   @foo = RedditListings.get("ruby+rails", :timeframe => "week", :total => "10")
+Would return the first 10 listings under the 'top' category on the ruby and rails subreddits combined in the last week.
+ 
+   @foo = RedditListings.get("ruby", :sort_by => "hot", :total => "2")
+Would return the first 2 listings in the ruby subreddit when sorted by hot.
+
+== Accessing the data
+
+Once you have the listings saved you can access them through @foo[0][:option] where 0 is the listing number you want and the option is one of the following:
+ * [:title]
+ * [:author] 
+ * [:num_comments]
+ * [:permalink]
+ * [:likes]
+ * [:gilded]
+ * [:stickied]
+ * [:score]
+ * [:approved_by]
+ * [:over_18]
+ * [:ups]
+ * [:downs]
+ * [:is_self]
+ * [:created]
+ * [:url]
+ * [:distinguished]
+
+=== Examples
+   @foo = RedditListings.get("ruby", :sort_by => "hot", :total => "1")
+Would return the first listing in the ruby subreddit when sorted by hot.
+   @foo[0][:title]
+Would then return the title of that listing.
+
+   @bar = RedditListings.get("ruby+rails", :sort_by => "gilded")
+Would return the first 5 gilded listings in the ruby and rails subreddits combined
+   @bar[4][:author]
+Would then return the username of the 5th listing returned.
+
+
+== Further info
+This gem was created (and tested) using rails 4.0.3
+
+Please use in conjunction with reddit's API rules - https://github.com/reddit/reddit/wiki/API
 
 This project rocks and uses MIT-LICENSE.
-
-Reddit_Listings allows you to quickly get an array of up to 100 listings (content posts and self posts) from any subreddit(s) and sorting methods possible.
 
 

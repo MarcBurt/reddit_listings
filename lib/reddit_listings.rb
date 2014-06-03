@@ -11,7 +11,12 @@ module RedditListings
     @listings = []
     @n = 0
 
-    @uri = URI('http://www.reddit.com/r/' + @subreddit + '/' + @sort + '/.json?limit=' + @limit + '&t=' + @time)
+    if @sort == "top" || @sort == "controversial"
+        @uri = URI('http://www.reddit.com/r/' + @subreddit + '/' + @sort + '/.json?limit=' + @limit + '&t=' + @time)
+    else
+        @uri = URI('http://www.reddit.com/r/' + @subreddit + '/' + @sort + '/.json?limit=' + @limit)
+    end
+
     @json = JSON.parse(Net::HTTP.get(@uri))        #HTTP.get returns a string which is parsed to JSON
     
     @limit.to_i.times do
