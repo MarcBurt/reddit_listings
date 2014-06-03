@@ -26,9 +26,9 @@ The options for <b>:sort_by</b> are: <em>"hot"</em>, <em>"new"</em>, <em>"rising
 
 The *:timeframe* option should only be included if <em>"top"</em> or <em>"controversial"</em>  <b>:sort_by</b> options were chosen. The options are: <em>"hour"</em>, <em>"week"</em>, <em>"month"</em>, <em>"year"</em> and <em>"all"</em>.
 
-The <b>:limit</b> option specifies how many listings should be returned, to a maximum of 100.
+The <b>:total</b> option specifies how many listings should be returned, to a maximum of 100.
 
-The default options are <b>:sort_by</b> => <em>"top"</em>, <b>:total"</b> => <em>"5"</em> and <b>:timeframe</b> => <em>"day"</em>
+The default options are <b>:sort_by</b> => <em>"top"</em>, <b>:total</b> => <em>"5"</em> and <b>:timeframe</b> => <em>"day"</em>
 
 === Examples
 
