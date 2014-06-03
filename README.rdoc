@@ -24,7 +24,7 @@ To use more than one subreddit join them with a +
 
 The options for <b>:sort_by</b> are: <em>"hot"</em>, <em>"new"</em>, <em>"rising"</em>, <em>"controversial"</em>, <em>"top"</em>, <em>"gilded"</em>, <em>"promoted"</em>.
 
-The *:timeframe* option should only be included if <em>"top"</em> or <em>"controversial"</em> <b>:sort_by</b> options were chosen. The options are <em>"hour"</em>, <em>"week"</em>, <em>"month"</em>, <em>"year"</em> and <em>"all"</em>.
+The *:timeframe* option should only be included if <em>"top"</em> or <em>"controversial"</em>  <b>:sort_by</b> options were chosen. The options are: <em>"hour"</em>, <em>"week"</em>, <em>"month"</em>, <em>"year"</em> and <em>"all"</em>.
 
 The <b>:limit</b> option specifies how many listings should be returned, to a maximum of 100.
 
@@ -40,7 +40,7 @@ Would return the first 2 listings in the ruby subreddit when sorted by hot.
 
 == Accessing the data
 
-Once you have the listings saved you can access them through @foo[0][:option] where 0 is the listing index you want and the option is one of the following:
+Once you have the listings saved you can access them through <b>@foo[0][:option]</b> where <b>0</b> is the listing index you want and the <b>:option</b> is one of the following:
 
 
 * [:title]
