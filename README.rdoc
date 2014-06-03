@@ -10,7 +10,7 @@ Reddit_Listings allows you to quickly get an array of up to 100 listings (conten
 
 * If your application uses Bundler, add a line like this to your Gemfile:
 
-    gem "reddit_listings", "~> 1.0.0"
+    gem "reddit_listings", "~> 1.0.1"
 
 == How to use
   
