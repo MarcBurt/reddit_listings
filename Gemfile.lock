@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    reddit_listings (1.0.0)
+    reddit_listings (1.0.1)
       rails (~> 4.0)
 
 GEM
