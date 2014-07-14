@@ -20,8 +20,10 @@ module RedditListings
     json = JSON.parse(Net::HTTP.get(uri))        #HTTP.get returns a string which is parsed to JSON
     
     limit.to_i.times do
+      hash = json['data']['children'][n]['data']
+      
       @listings[n] = { 
-        hash = json['data']['children'][n]['data']
+        
         title: hash['title'], 
         author: hash['author'], 
         num_comments: hash['num_comments'], 
