@@ -21,22 +21,23 @@ module RedditListings
     
     limit.to_i.times do
       @listings[n] = { 
-        title: json['data']['children'][n]['data']['title'], 
-        author: json['data']['children'][n]['data']['author'], 
-        num_comments: json['data']['children'][n]['data']['num_comments'], 
-        permalink: json['data']['children'][n]['data']['permalink'], 
-        likes: json['data']['children'][n]['data']['likes'], 
-        gilded: json['data']['children'][n]['data']['gilded'], 
-        stickied: json['data']['children'][n]['data']['stickied'], 
-        score: json['data']['children'][n]['data']['score'],
-        approved_by: json['data']['children'][n]['data']['approved_by'],
-        over_18: json['data']['children'][n]['data']['over_18'],
-        ups: json['data']['children'][n]['data']['ups'],
-        downs: json['data']['children'][n]['data']['downs'],
-        is_self: json['data']['children'][n]['data']['is_self'],
-        created: json['data']['children'][n]['data']['created'],
-        url: json['data']['children'][n]['data']['url'],  
-        distinguised: json['data']['children'][n]['data']['distinguished'] 
+        hash = json['data']['children'][n]['data']
+        title: hash['title'], 
+        author: hash['author'], 
+        num_comments: hash['num_comments'], 
+        permalink: hash['permalink'], 
+        likes: hash['likes'], 
+        gilded: hash['gilded'], 
+        stickied: hash['stickied'], 
+        score: hash['score'],
+        approved_by: hash['approved_by'],
+        over_18: hash['over_18'],
+        ups: hash['ups'],
+        downs: hash['downs'],
+        is_self: hash['is_self'],
+        created: hash['created'],
+        url: hash['url'],  
+        distinguised: hash['distinguished'] 
       }
 
       n +=1
